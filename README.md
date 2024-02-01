@@ -1,4 +1,4 @@
-# Week 2 Practical 2 - Positioning
+# Practical 4 (Week 2) - Positioning
 
 In this practical, you will practice creating page layouts using basic CSS. This is one of the hardest skills to master in CSS as it is quite easy to unintentionally create styles that cancel each other out and you are often fighting against implicit style rules and the many, many quirks of CSS. There are more modern approaches to layout that can make this task _slightly_ easier. We will cover these approaches next week. For now, however, your job is to wrestle with the older approach to layout as it is still useful and widely used and therefore important to know. 
 
