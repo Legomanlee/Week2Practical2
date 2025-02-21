@@ -28,10 +28,16 @@ The final objective is to create the layout shown below, but the process has bee
 ![Layout for stage 2 exercises](https://github.com/IM-WADD/Week2Practical2/assets/5978932/d3a942d6-df99-4300-83c8-628fef27ed25)
 
 ### Exercise 2.1: Create the content area 
-In the image of the final layout, notice that the content is contained in a central area with equal size margins on either side. Create this effect by changing the background colour of the body to a colour of your choosing. HTML elements are transparent by default so you will be able to see your background colour behind the text. You will need to set the background colour of your content elements to white. The simplest way to do this is to add a `<div>` as the first child of the `<body>` element then put all the other content elements inside it. We haven’t seen `<div>` much yet because there have been better semantic choices in the examples so far. However, this is an appropriate time to use a `<div>` as the goal is to create a visual grouping without a particular meaning in terms of the content or structure of the page. Add CSS to give the `<div>` a white background and equal size left and right margins (use relative units!). It’s a good idea to give the `<div>` a unique ID for styling purposes, just in case you need to use more `<div>` elements elsewhere in the page. 
+In the image of the final layout, notice that the content is contained in a central area with equal size margins on either side. Create this effect by changing the background colour of the body to a colour of your choosing. 
+
+HTML elements are transparent by default so you will be able to see your background colour behind the text. You will need to set the background colour of your content elements to white. The simplest way to do this is to add a `<div>` as the first child of the `<body>` element then put all the other content elements inside it. We haven’t seen `<div>` much yet because there have been better semantic choices in the examples so far. However, this is an appropriate time to use a `<div>` as the goal is to create a visual grouping without a particular meaning in terms of the content or structure of the page. 
+
+Add CSS to give the `<div>` a white background and equal size left and right margins (use relative units!). It’s a good idea to give the `<div>` a unique ID for styling purposes, just in case you need to use more `<div>` elements elsewhere in the page. 
 
 ### Exercise 2.2: Style the header
-Use the `inline-block` approach to get the page title and date to appear side-by-side. The date should be right aligned using the `text-align` property. Normally, that is all that is required to set the alignment of a paragraph. However, remember that setting a block element’s `display` property to `inline` or `inline-block` causes its width to shrink from the width of its parent to the width of its content. This means that right aligned text will appear the same as left aligned text. To get around this, you can set the widths of the page title and date elements using relative units that add up to 100%.
+Get the page title and date to appear side-by-side by setting `display` to `inline-block` on the appropriate elements. 
+
+The date should be right aligned using the `text-align` property. Normally, that is all that is required to set the alignment of a paragraph. However, remember that setting a block element’s `display` property to `inline` or `inline-block` causes its width to shrink from the width of its parent to the width of its content. This means that right aligned text will appear the same as left aligned text. To get around this, you can set the widths of the page title and date elements using relative units that add up to 100%.
 
 You’ve probably just encountered another CSS quirk: the `inline-block` whitespace issue. In lecture, we saw that we can fix misbehaving widths of block elements by setting the `box-sizing` property to `border-box` so that the width calculation includes padding, border, and margin as well as content. Although the current problem looks similar, the box model is not the culprit in this instance. When the browser renders `inline-block` elements, it automatically adds a few pixels of space for any white space it encounters in the HTML file. This includes line breaks between HTML elements. There are two ways to fix this, both are hacky:
 
@@ -52,10 +58,11 @@ Now, clicking on the list item background will also activate the link
 
 ### Exercise 2.4: Create the middle section
 Look at the final layout alongside the HTML. Hopefully you can see how the main layout grid areas map to the semantic HTML elements. Notice that the `<main>` area fills 75% of the content area width. The `<aside>` is 25% of the content area width and sits alongside the `<main>` area.
-Write CSS to achieve this layout using any of the approaches covered last lecture. There are a few different ways to approach this task. All have pros and cons!
+
+Write CSS to achieve this layout using any of the approaches covered in lecture. There are a few different ways to approach this task. All have pros and cons!
 1. Set `float:left` on `<main>`. You will also need to add styling to `<footer>`.
-2. Change the display property of `<main>` and `<aside>` to `inline-block`. If you find the `<aside>` is not aligned with the top of `<main>`, try setting the `vertical-align` property of `<aside>`.
-3. Use the `position` property. You will likely need to wrap `<main>` and `<aside>` in another `<div>` with its `position` property set.
+2. Alternatively, change the display property of `<main>` and `<aside>` to `inline-block`. If you find the `<aside>` is not aligned with the top of `<main>`, try setting the `vertical-align` property of `<aside>`.
+3. Another option is to use the `position` property. You will likely need to wrap `<main>` and `<aside>` in another `<div>` with its `position` property set.
 
 ### Exercise 2.5: The Main News Story
 The main news story consists of the headline, content paragraphs including subheadings and an image with a caption. Make the image and caption float to the right of the story, with the subheading and its content wrapping the image.
